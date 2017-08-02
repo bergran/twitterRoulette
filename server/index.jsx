@@ -1,18 +1,24 @@
-// const express = require('express')
 import express from 'express'
 import React from 'react'
-import ReactDom, { renderToString } from 'react-dom'
+import ReactDOMServer from 'react-dom/server'
 
-const helloWorld = () => (<div>Hello World</div>)
+import config from './config/config.main.js'
 
 const app = express()
+const PORT = config.port
 
-app.get('/', (req, res) => (res.send('Hello world')))
-app.get('/about/:id', (req, res) => {
-  console.dir(req)
-  return res.send(renderToString(<helloWorld/>))
-})
+/**
+* Request that will listen
+*/
 
-app.listen(3000, function () {
-  console.log('Server listening on port 3000')
+app.get('/', (req, res) => (
+  res.send('Hello world')
+))
+
+/**
+* app start
+*/
+
+app.listen(PORT, function () {
+  console.log(`Server listening on port ${PORT}`)
 })

@@ -9,7 +9,7 @@ module.exports = {
   module: {
     loaders: [
     {
-      test: /\.jsx$/,
+      test: /\.jsx?$/,
       loader: 'babel-loader',
       exclude: __dirname + '/../(node_modules)/',
       query: {
