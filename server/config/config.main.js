@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   /**
   * default config:
   * port: server listening port

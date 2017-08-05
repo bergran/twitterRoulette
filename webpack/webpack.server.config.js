@@ -1,10 +1,10 @@
 const webpack = require("webpack");
 
 module.exports = {
-  entry:  __dirname + '/../server/index.jsx',
+  entry:  __dirname + '/../app/source.jsx',
   output: {
-    path: __dirname + '/../serverApp',
-    filename: 'server.js'
+    path: __dirname + '/../bundle',
+    filename: 'index.js'
     },
   module: {
     loaders: [
@@ -17,5 +17,4 @@ module.exports = {
       }
     }
   ]},
-  target: 'node'
 }
