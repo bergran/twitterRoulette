@@ -1,5 +1,5 @@
 const express = require('express')
-const config = require('./config/config.main.js')
+const config = require('./config/index.json')
 const path = require('path')
 
 const app = express()
